@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/fragmentMain">
+
+    <fragment
+        android:id="@+id/fragmentMain"
+        android:name="com.row.game.ui.starting.FragmentStarting"
+        android:label="FragmentMain" >
+        <action
+            android:id="@+id/action_fragmentMain_to_fragmentAncientGame"
+            app:destination="@id/fragmentAncientGame" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentAncientGame"
+        android:name="com.row.game.ui.multi_row.FragmentMultiRow"
+        android:label="FragmentAncientGame" >
+        <action
+            android:id="@+id/action_fragmentAncientGame_to_dialogLoss"
+            app:destination="@id/dialogLoss" />
+        <action
+            android:id="@+id/action_fragmentAncientGame_to_dialogWin"
+            app:destination="@id/dialogWin" />
+        <action
+            android:id="@+id/action_fragmentAncientGame_to_dialogPause"
+            app:destination="@id/dialogPause" />
+    </fragment>
+    <dialog
+        android:id="@+id/dialogLoss"
+        android:name="com.row.game.ui.dialogs.DialogLoss"
+        android:label="DialogLoss" >
+        <argument
+            android:name="task1"
+            app:argType="integer" />
+        <argument
+            android:name="task2"
+            app:argType="integer" />
+        <argument
+            android:name="task3"
+            app:argType="integer" />
+        <argument
+            android:name="task4"
+            app:argType="integer" />
+    </dialog>
+    <dialog
+        android:id="@+id/dialogWin"
+        android:name="com.row.game.ui.dialogs.DialogWin"
+        android:label="DialogWin" >
+        <argument
+            android:name="time"
+            app:argType="integer" />
+    </dialog>
+    <dialog
+        android:id="@+id/dialogPause"
+        android:name="com.row.game.ui.dialogs.DialogPause"
+        android:label="DialogPause" />
+</navigation>

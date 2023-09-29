@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="380dp"
+        android:layout_height="460dp"
+        android:background="@drawable/win"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/time"
+            style="@style/BasicText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="265dp"
+            tools:text="22:22:22"
+            android:textSize="40sp" />
+
+        <LinearLayout
+            android:layout_marginBottom="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <com.row.game.core.library.CustomImageButton
+                android:id="@+id/menu"
+                android:layout_width="80dp"
+                android:layout_height="55dp"
+                android:src="@drawable/menu" />
+
+            <com.row.game.core.library.CustomImageButton
+                android:id="@+id/restart"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="80dp"
+                android:layout_height="55dp"
+                android:src="@drawable/restart" />
+
+            <com.row.game.core.library.CustomImageButton
+                android:id="@+id/next"
+                android:layout_width="80dp"
+                android:layout_height="55dp"
+                android:src="@drawable/next" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
